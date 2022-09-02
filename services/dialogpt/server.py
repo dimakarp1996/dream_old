@@ -122,7 +122,6 @@ def continue_last_uttr():
         logger.exception(exc)
         sentry_sdk.capture_exception(exc)
         responses = [[""]] * len(contexts)
-        confidences = [[ZERO_CONFIDENCE]] * len(contexts)
 
     total_time = time.time() - st_time
     logger.info(f"dialogpt continue exec time: {total_time:.3f}s")
