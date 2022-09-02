@@ -100,7 +100,7 @@ def respond():
 
 
 @app.route("/continue", methods=["POST"])
-def respond():
+def continue_last_uttr():
     st_time = time.time()
     contexts = request.json.get("utterances_histories", [])
 
